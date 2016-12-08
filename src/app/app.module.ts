@@ -7,12 +7,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComicComponent } from './comic/comic.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ComicComponent
+    ComicComponent,
+    BookComponent
   ],
   imports: [
     NgbModule.forRoot(),

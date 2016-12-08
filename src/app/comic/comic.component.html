@@ -1,4 +1,5 @@
-<p>
-  comic works!
-</p>
-
+<div #wrapper id="wrapper"  (window:resize)="onResize(wrapper.getBoundingClientRect(), book)">
+  <div id="book" #book  >
+    <p>Book is there</p>
+  </div>
+</div>

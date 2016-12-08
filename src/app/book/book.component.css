@@ -1,0 +1,12 @@
+:host
+{
+  display: block;
+  width: 1474px;
+  height: 1020px;
+  border: 10px solid #19375f;
+  background: pink;
+  margin: -510px -737px;
+  top:50%;
+  left: 50%;
+  position: absolute;
+}
