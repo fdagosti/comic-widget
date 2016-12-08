@@ -33,17 +33,12 @@ export class ComicComponent implements OnInit, AfterViewInit{
     let scale;
 
 
-    let maxWidth = bookRef.clientWidth + 20;
-    let maxHeight = bookRef.clientHeight+20;
+    let bookWidth = bookRef.clientWidth + 20;
+    let bookHeight = bookRef.clientHeight+20;
 
 
-    // early exit
-    if(width >= maxWidth && height >= maxHeight) {
-      bookRef.style.transform="";
-      return;
-    }
 
-    scale = Math.min(width/maxWidth, height/maxHeight);
+    scale = Math.min(width/bookWidth, height/bookHeight);
 
     // console.log("WINDOW RESIZE ",width, height, maxWidth, maxHeight);
     // console.log("SCALE ",scale);
