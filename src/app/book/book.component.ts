@@ -13,7 +13,7 @@ import {ComicService} from "../comic.service";
           {
             opacity: 0,
           }),
-        animate("0.3s ease-out", style({
+        animate(".3s ease-out", style({
           opacity: 1
         }))
       ]),
