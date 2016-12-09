@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {ComicService} from "../comic.service";
 
 @Component({
   selector: 'cow-footer',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  @Input() totalPageNumber;
+  @Input() currentPageNumber;
+
+  constructor(private book: ComicService) { }
 
   ngOnInit() {
+    this.totalPageNumber = this.book.getTotalPageNumber();
+    this.currentPageNumber = this.book.getCurrentPageNumber();
+    this.book.pageChanged.subscribe((page) => {
+      this.currentPageNumber = page;
+    })
   }
 
 }

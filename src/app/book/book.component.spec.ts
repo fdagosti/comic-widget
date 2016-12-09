@@ -24,5 +24,15 @@ describe('BookComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    console.log("component = ",component)
+    expect(component.getLeftPageIdx(1)).toBe(1);
+    expect(component.getLeftPageIdx(2)).toBe(1);
+    expect(component.getLeftPageIdx(3)).toBe(3);
+    expect(component.getLeftPageIdx(4)).toBe(3);
+
+    expect(component.getRightPageIdx(1)).toBe(2);
+    expect(component.getRightPageIdx(2)).toBe(2);
+    expect(component.getRightPageIdx(3)).toBe(4);
+    expect(component.getRightPageIdx(4)).toBe(4);
   });
 });

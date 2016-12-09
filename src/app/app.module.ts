@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComicComponent } from './comic/comic.component';
 import { BookComponent } from './book/book.component';
+import {ComicService} from "./comic.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { BookComponent } from './book/book.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ComicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

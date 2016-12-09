@@ -1,8 +1,4 @@
-import {
-  Component, OnInit, ElementRef, HostListener, ViewChildren, QueryList, AfterViewChecked,
-  ViewChild, AfterViewInit
-} from '@angular/core';
-import {BookComponent} from "../book/book.component";
+import {Component, OnInit, ViewChild, AfterViewInit} from "@angular/core";
 
 @Component({
   selector: 'cow-comic',
@@ -20,7 +16,6 @@ export class ComicComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    console.log("BOOK ",this.book);
     let bounds = this.wrapper.nativeElement.getBoundingClientRect();
     this.onResize(bounds, this.book.nativeElement);
   }
@@ -40,8 +35,6 @@ export class ComicComponent implements OnInit, AfterViewInit{
 
     scale = Math.min(width/bookWidth, height/bookHeight);
 
-    // console.log("WINDOW RESIZE ",width, height, maxWidth, maxHeight);
-    // console.log("SCALE ",scale);
     bookRef.style.transform='scale(' + scale + ')';
   }
 

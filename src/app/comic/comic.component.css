@@ -2,9 +2,11 @@
   display: block;
   width:100%;
   height: 100%;
-  background-color: red;
+  background-color: black;
   padding-top: 54px;
   padding-bottom: 58px;
+  overflow: hidden;
+  position: relative;
 }
 
 #wrapper{
@@ -12,16 +14,53 @@
   height: 100%;
 }
 
-
 #book
 {
   display: block;
-  width: 1474px;
+  cursor: pointer;
+  width: 747px;
   height: 1020px;
   border: 10px solid #19375f;
   background: pink;
-  margin: -510px -737px;
+  margin: -510px -374px;
   top:50%;
   left: 50%;
   position: absolute;
+  transition: transform .15s ease-out,-webkit-transform .15s;
+  will-change: transform;
 }
+
+
+.nav-arrow{
+  display: none;
+  position: absolute;
+  font-size: 124px;
+  color: #29aeda;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.nav-arrow-prev{
+  right: 100%;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.nav-arrow-next{
+  left: 100%;
+  margin-left: 15px;
+}
+
+@media (min-width: 1024px) {
+  #book{
+    width: 1474px;
+    margin: -510px -737px;
+  }
+
+  .nav-arrow{
+    display: block;
+  }
+}
+

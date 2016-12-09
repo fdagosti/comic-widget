@@ -1,3 +1,17 @@
-<p>
-  book works!
-</p>
+  <div class="page" [class.unfocusedPage]="unfocusedPage==0">
+        <span>
+          <img *ngFor="let page of leftPages" [@flyInOut]="'in'" [src]="page" alt="">
+        </span>
+    <span>
+          <div class="page_bg"></div>
+        </span>
+  </div>
+  <div class="page" [class.unfocusedPage]="unfocusedPage==1">
+        <span>
+          <img *ngFor="let page of rightPages" [@flyInOut]="'in'" [src]="page" alt="">
+        </span>
+    <span>
+          <div class="page_bg"></div>
+        </span>
+  </div>
+  <div class="inner-bg"></div>

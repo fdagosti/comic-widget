@@ -4,4 +4,34 @@
   bottom: 0;
   height: 58px;
   width: 100%;
+  padding-top: 1.071em;
+  padding-bottom: 1.071em;
+  overflow: hidden;
+}
+
+.page-counter{
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-family: Futura,sans-serif;
+  font-size: 1.28571em;
+  font-weight: 700;
+  color: white;
+}
+
+.auteur{
+  font-size: 1em;
+  display: inline-block;
+  padding: 0 10px;
+  font-family: Futura,sans-serif;
+  font-style: italic;
+  color: white;
+  width: 100%;
+  text-align: right;
+}
+
+@media (min-width:1024px) {
+  .page-counter{
+    text-align: center;
+  }
 }
