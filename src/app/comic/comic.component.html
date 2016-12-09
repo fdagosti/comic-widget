@@ -1,6 +1,16 @@
-<div (window:keydown)="bookComp.movePage($event.code)" #wrapper id="wrapper"  (window:resize)="onResize(wrapper.getBoundingClientRect(), book)">
+<div
+  (window:keydown)="bookComp.movePage($event.code)"
+  #wrapper
+  id="wrapper"
+  (window:resize)="onResize(wrapper.getBoundingClientRect(), book)"
+>
   <div id="book" #book >
-    <cow-book #bookComp (click)="bookComp.nextPage()"   ></cow-book>
+    <cow-book
+      (swiperight)="bookComp.prevPage()"
+      (swipeleft)="bookComp.nextPage()"
+      #bookComp
+      (click)="bookComp.nextPage()"
+    ></cow-book>
     <div class="nav-arrow nav-arrow-prev" (click)="bookComp.prevPage()">
       <i  class="fa fa-angle-double-left" aria-hidden="true"></i>
     </div>
