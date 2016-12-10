@@ -23,6 +23,5 @@ script:
 - karma start karma.conf.js --single-run
 
 after_success:
-- npm install angular-cli-ghpages
 - ng build --prod
 - ng ghpages
