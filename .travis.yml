@@ -23,5 +23,4 @@ script:
 - karma start karma.conf.js --single-run
 
 after_success:
-- ng build --prod
-- ng ghpages
+- ng github-pages:deploy --gh-token $GH_TOKEN
