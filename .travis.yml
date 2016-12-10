@@ -23,8 +23,5 @@ script:
 - ng build
 - karma start karma.conf.js --single-run
 
-deploy:
-- ng github-pages:deploy
-
 after_success:
 - ng github-pages:deploy
