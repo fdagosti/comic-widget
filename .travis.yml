@@ -16,7 +16,6 @@ before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm install -g angular-cli
 
 
 script:
@@ -24,4 +23,6 @@ script:
 - karma start karma.conf.js --single-run
 
 after_success:
-- ng github-pages:deploy
+- npm install angular-cli-ghpages
+- ng build --prod
+- ng ghpages
