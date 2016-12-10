@@ -23,4 +23,5 @@ script:
 - karma start karma.conf.js --single-run
 
 after_success:
+- ssh-add $SSH_KEY
 - ng github-pages:deploy --gh-token $GH_TOKEN
