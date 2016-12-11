@@ -26,4 +26,5 @@ script:
 after_success:
 - echo TOTO > ssh.txt
 - echo ssh.txt
+- chmod 600 ssh.txt
 - ssh-add ssh.txt && ng github-pages:deploy --gh-token $GH_TOKEN
