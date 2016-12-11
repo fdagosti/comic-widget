@@ -24,7 +24,5 @@ script:
 - karma start karma.conf.js --single-run
 
 after_success:
-- echo $TOTO > ssh.txt
-- more ssh.txt
-- chmod 600 ssh.txt
-- ssh-add ssh.txt && ng github-pages:deploy --gh-token $GH_TOKEN
+- ssh-add <(echo "$TOTO")
+- ng github-pages:deploy --gh-token $GH_TOKEN
